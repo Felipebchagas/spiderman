@@ -1,0 +1,282 @@
+﻿@import url(reset.css);
+@import url(global.css);
+
+
+body {
+    background-color: var(--primary-color);
+}
+
+body::before {
+    content: "";
+    background-image: url('/images/spider-man-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.2;
+    z-index: -1;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+
+}
+
+.menu-desktop {
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.menu-desktop ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu_item {
+    text-transform: uppercase;
+    margin: 0 1.25rem;
+}
+
+.menu_icon {
+    width: 2.5rem;
+    margin: 0 1.25rem;
+    z-index: 2;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+
+
+.spider_cards_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    perspective: 3000px;
+}
+
+.cards-carousel {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw / 3 - 10%);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in;
+}
+
+.spider_card {
+    border: 0.5rem solid white;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    transition: filter 0.5s ease-in-out;
+}
+
+.spider_card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50vw);
+}
+
+.spider_card:nth-child(2) {
+    transform: rotateY(120deg) translateZ(50vw);
+}
+
+.spider_card:nth-child(3) {
+    transform: rotateY(240deg) translateZ(50vw);
+}
+
+.card_background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.card_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    transition: 0.8s ease-in-out;
+}
+
+.card_title {
+    width: 100%;
+    bottom: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    transition: bottom 1s ease-in-out;
+}
+
+.carousel_controller {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    column-gap: 3.75rem;
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+.controller_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.controller_button:hover {
+    transform: scale(1.1);
+}
+
+.controller_button--active {
+    background-color: white;
+    color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    outline: 0.125rem solid white;
+}
+
+.controller_line {
+    background-color: white;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+}
+
+
+/* ---- Cards Hover Animation ---- */
+
+.s-card--hovered .card_background {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.s-card--hovered .card_image {
+    transform: scale(1.4);
+    filter: drop-shadow(30px 10px 4px rgba(0, 0, 0 .5));
+}
+
+body#spider-man-01-hovered::before {
+    background-image: url('/images/pic-sm-bg-01.jpg');
+}
+
+
+body#spider-man-02-hovered::before {
+    background-image: url('/images/pic-sm-bg-02.jpg');
+}
+
+body#spider-man-03-hovered::before {
+    background-image: url('/images/pic-sm-bg-03.jpg');
+}
+
+body[id^="spider-man-"]::before {
+    opacity: 1;
+}
+
+body[id^="spider-man-"] .spider_card:not(.s-card--hovered) {
+    filter: grayscale(100%);
+}
+
+.s-card--hovered .card_title {
+    bottom: 50%;
+}
+
+
+
+/* -------- Mobile Responsive ------ */
+
+
+@media screen and (max-width: 732px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .menu-mobile__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-mobile__logo {
+        width: 50%;
+
+    }
+
+    .menu-mobile__logo img {
+        width: 50px;
+    }
+
+    .s-item-list {
+        display: none;
+        width: 100%;
+        background-color: rgba(255, 0, 0, 0.733);
+        position: absolute;
+        border-radius: 0 0 .75rem .75rem;
+        z-index: 2;
+        height: auto;
+        text-align: center;
+        border-bottom: 3.5px solid white;
+        padding: 4rem 0 4rem 0;
+    }
+
+
+
+    .botao-menu-mobile {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        order: 1;
+        z-index: 3;
+        position: relative;
+        right: 1rem;
+    }
+
+    .fa-bars {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .spider_card {
+        width: 80%;
+
+    }
+
+    .cards-carousel {
+        width: 100%;
+        display: flex;
+        width: calc(100vw - 42%);
+    }
+
+    .fa-times{
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+    }
+
+}
+

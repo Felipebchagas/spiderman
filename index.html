@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/Spiderman-Old-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="Css/home-page.css">
+    <script src="https://kit.fontawesome.com/d6ab2d4943.js" crossorigin="anonymous"></script>
+    <script src="js/card-hover-animation.js"></script>
+    <script src="js/card-carousel.js"></script>
+    <title>Spider-Man</title>
+</head>
+<body>
+
+    <header>
+        <nav class="menu-desktop">
+            <ul class="ul">
+                <li class="menu_item">
+                    <a href="/">Página Inicial</a>
+                </li>
+                <li class="menu_item">
+                    <a href="pages/tobey-maguire/spiderman1.html">Tobey Maguire</a>
+                </li>
+                <li class="menu_icon">
+                    <img src="images/icons/spider.svg" alt="">
+                </li>
+                <li class="menu_item">
+                    <a href="pages/andrew-garfield/spiderman1.html">Andrew Garfield</a>
+                </li>
+                <li class="menu_item">
+                    <a href="pages/tom-holland/spiderman1.html">Tom Holland</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="menu-mobile">
+            <div class="menu-mobile__container">
+                <div class="botao-menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="menu-mobile__logo">
+                    <a href=""><img src="images/icons/spider.svg" alt=""></a>
+                </div>
+            </div>
+            <ul class="s-item-list">
+                <li class="menu_item">
+                    <a href="/">Página Inicial</a>
+                </li>
+                <li class="menu_item">
+                    <a href="pages/tobey-maguire/spiderman1.html">Tobey Maguire</a>
+                </li>
+                <li class="menu_item">
+                    <a href="pages/andrew-garfield/spiderman1.html">Andrew Garfield</a>
+                </li>
+                <li class="menu_item">
+                    <a href="pages/tom-holland/spiderman1.html">Tom Holland</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="spider_cards_container">
+       <div class="cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);">
+           <a href="pages/tobey-maguire/spiderman1.html" class="spider_card" id="spider-man-01">
+                <img class="card_background" src="images/pic-sm-bg-01.jpg" alt="">
+                <img class="card_image" src="images/spider-man-01.png" alt="Tobey Maguire">
+                <h2 class="card_title">Tobey Maguire</h2>
+            </a>
+            <a href="pages/andrew-garfield/spiderman1.html" class="spider_card" id="spider-man-03">
+                <img class="card_background" src="images/pic-sm-bg-03.jpg" alt="">
+                <img class="card_image" src="images/spider-man-03.png" alt="Andrew Garfield">
+                <h2 class="card_title">Andrew Garfield</h2>
+            </a>
+            <a href="pages/tom-holland/spiderman1.html" class="spider_card" id="spider-man-02">
+                <img class="card_background" src="images/pic-sm-bg-02.jpg" alt="">
+                <img class="card_image" src="images/spider-man-02.png" alt="Tom Holland">
+                <h2 class="card_title">Tom Holland</h2>
+            </a>
+       </div>
+    </div>
+
+    <div class="carousel_controller">
+        <div class="controller_button controller_button--active" id="1" onclick="selectCarouselItem(this)">
+            1
+        </div>
+
+        <div class="controller_button"  id="2" onclick="selectCarouselItem(this)">
+            2
+        </div>
+
+        <div class="controller_button" id="3" onclick="selectCarouselItem(this)">
+            3
+        </div>
+
+        <div class="controller_line"></div>
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/menu-mobile.js"></script>
+</body>
+</html>

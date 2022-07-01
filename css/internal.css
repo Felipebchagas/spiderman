@@ -1,0 +1,192 @@
+﻿@import url('reset.css');
+@import url('global.css');
+@import url('components/_nav.css');
+@import url('components/_pills.css');
+@import url('components/_link-button.css');
+@import url('components/_gallery.css');
+
+
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.left_column {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-right: 50px;
+    z-index: 1;
+}
+
+.main_content {
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    padding-left: 130px;
+}
+
+
+.main_content_top {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main_content_bottom {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.spider-logo {
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+.spider-logo img {
+    block-size: fit-content;
+    width: 72%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.content_description {
+    background-color: rgba(0,0,0, .7);
+    width: 68%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.description_text p {
+    color: white;
+}
+
+.description_text span {
+    font-weight: 700;
+}
+
+.s-links ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+#main-bg-spider-01-01 {
+    background: url('/images/spiderman-tobey/movie-01/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+
+    
+}
+
+#main-bg-spider-01-02 {
+    background: url('/images/spiderman-tobey/movie-02/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#main-bg-spider-01-03 {
+    background: url('/images/spiderman-tobey/movie-03/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#main-bg-spider-02-01 {
+    background: url('/images/spiderman-tom/movie-01/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#main-bg-spider-02-02 {
+    background: url('/images/spiderman-tom/movie-02/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#main-bg-spider-02-03{
+    background: url('/images/spiderman-tom/movie-03/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+}
+
+#main-bg-spider-03-01{
+    background: url('/images/spiderman-andrew/movie-01/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#main-bg-spider-03-02{
+    background: url('/images/spiderman-andrew/movie-02/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        height: 100%;
+    }
+
+    .main_content {
+        width: 100%;
+        height: 100%;
+        background-color: grey;
+        padding-left: 130px;
+    }
+
+    .spider-logo {
+        display: flex;
+        align-items: center;
+        height: 10%;
+    }
+
+    .main_content_top {
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    
+    .main_content_bottom {
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

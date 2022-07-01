@@ -1,0 +1,33 @@
+﻿.gallery {
+    padding: 20px;
+    padding-left: 0;
+}
+
+.gallery ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+}
+
+.gallery li img {
+    width: 100%;
+    border: 6px solid white;
+    border-radius: 15px;  
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .gallery {
+        padding: 0;
+    }
+    
+    .gallery ul {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+
+    }
+}
